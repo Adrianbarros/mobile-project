@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { SearchBar } from '../components/searchBar';
+import { SearchBarComponent } from '../components/searchBar';
 
 
 const Home = () => {
     return (<View style={styles.screen}>
-        <SearchBar />
+        <SearchBarComponent />
         <Text>Home</Text>
     </View>);
 }
