@@ -14,6 +14,7 @@ export const SearchBarComponent = () => {
         <SafeAreaView style={styles.container}>
             <TextInput
                 style={styles.input}
+                placeholder='Search'
             />
         </SafeAreaView>
 
@@ -23,10 +24,14 @@ export const SearchBarComponent = () => {
 const styles = StyleSheet.create({
     input: {
         color: '#FFF',
-        height: 40,
+        height: 48,
         margin: 12,
         borderWidth: 1,
         padding: 10,
+        borderRadius: 12,
+        borderColor: '#FFF',
+        shadowColor: '#001226',
+        shadowOpacity: .2,
     },
     container: {
         width: 300,
