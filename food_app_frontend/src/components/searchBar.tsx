@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, TextInput, SafeAreaView, Image } from 'react-native';
-import Svg, { Image as SvgImage } from 'react-native-svg';
+import { StyleSheet, TextInput, SafeAreaView } from 'react-native';
 
 
 export const SearchBarComponent = () => {
@@ -29,18 +28,19 @@ export const SearchBarComponent = () => {
 
 const styles = StyleSheet.create({
     input: {
-        color: '#FFF',
         height: 48,
         margin: 12,
         borderWidth: 1,
         padding: 10,
         borderRadius: 12,
+        borderColor: '#ddd',
+        backgroundColor: '#fff',
         shadowColor: '#001226',
-        shadowOpacity: .2,
+        shadowOpacity: 0.3,
+        elevation: 2,
     },
     container: {
         width: 300,
-        backgroundColor: 'black'
     },
 
 });
