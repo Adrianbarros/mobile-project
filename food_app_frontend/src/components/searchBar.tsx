@@ -11,15 +11,11 @@ export const SearchBarComponent = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Svg width={200} height={200}>
-                <SvgImage
-                    href={require('../assets/iconSearch.svg')}
-                    width="100%"
-                    height="100%" />
-            </Svg>
             <TextInput
                 style={styles.input}
                 placeholder='Search'
+                value={search}
+                onChangeText={setSearch}
             />
         </SafeAreaView>
 
