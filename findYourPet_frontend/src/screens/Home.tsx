@@ -7,9 +7,12 @@ import { ItemCard } from '../components/card';
 
 const Home = () => {
     const payload = {
-        name: 'munchkin',
-        type: 'big boy',
-        liked: false,
+        data: [{
+            name: 'munchkin',
+            type: 'big boy',
+            liked: false
+        },]
+
     }
     return (
         <View style={styles.screen}>
@@ -18,7 +21,9 @@ const Home = () => {
                 <Text style={styles.title} >Recommended For You</Text>
                 <Text style={styles.link}>On The Map </Text>
             </View>
-            <ItemCard info={payload} />
+            {payload.data.map((item, index) => (
+                <ItemCard key={index} info={item} />
+            ))}
         </View>);
 }
 
