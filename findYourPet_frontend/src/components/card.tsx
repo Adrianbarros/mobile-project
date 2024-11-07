@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         marginTop: 30,
         alignItems: 'center',
+        marginLeft: 20,
     },
     shadow: {
         shadowColor: '#001226',

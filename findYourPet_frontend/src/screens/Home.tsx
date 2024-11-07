@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 import { SearchBarComponent } from '../components/searchBar';
 import { ItemCard } from '../components/card';
 
@@ -8,6 +8,10 @@ import { ItemCard } from '../components/card';
 const Home = () => {
     const payload = {
         data: [{
+            name: 'munchkin',
+            type: 'big boy',
+            liked: false
+        }, {
             name: 'munchkin',
             type: 'big boy',
             liked: false
@@ -21,9 +25,11 @@ const Home = () => {
                 <Text style={styles.title} >Recommended For You</Text>
                 <Text style={styles.link}>On The Map </Text>
             </View>
-            {payload.data.map((item, index) => (
-                <ItemCard key={index} info={item} />
-            ))}
+
+            <FlatList data={payload.data}
+                renderItem={({ item }) => <ItemCard info={item} />}
+                horizontal
+            />
         </View>);
 }
 
@@ -58,8 +64,6 @@ const styles = StyleSheet.create({
         fontWeight: '400',
         lineHeight: 16,
     },
-
-
 
 
 });
