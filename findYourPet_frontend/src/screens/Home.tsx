@@ -8,10 +8,12 @@ import { ItemCard } from '../components/card';
 const Home = () => {
     const payload = {
         data: [{
+            id: '1',
             name: 'munchkin',
             type: 'big boy',
             liked: false
         }, {
+            id: '2',
             name: 'munchkin',
             type: 'big boy',
             liked: false
@@ -28,7 +30,9 @@ const Home = () => {
 
             <FlatList data={payload.data}
                 renderItem={({ item }) => <ItemCard info={item} />}
+                keyExtractor={(item) => item.id}
                 horizontal
+
             />
         </View>);
 }
