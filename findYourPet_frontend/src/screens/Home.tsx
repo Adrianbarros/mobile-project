@@ -34,6 +34,17 @@ const Home = () => {
                 horizontal
 
             />
+            <View style={styles.titleContainer}>
+                <Text style={styles.title} >Most Recent Additions</Text>
+
+            </View>
+
+            <FlatList data={payload.data}
+                renderItem={({ item }) => <ItemCard info={item} />}
+                keyExtractor={(item) => item.id}
+                horizontal
+
+            />
         </View>);
 }
 
