@@ -25,7 +25,7 @@ const Home = () => {
             <SearchBarComponent />
             <View style={styles.titleContainer}>
                 <Text style={styles.title} >Recommended For You</Text>
-                <Text style={styles.link}>On The Map </Text>
+                <Text style={styles.link}>On The Map</Text>
             </View>
 
             <FlatList data={payload.data}
@@ -35,16 +35,12 @@ const Home = () => {
 
             />
             <View style={styles.titleContainer}>
-                <Text style={styles.title} >Most Recent Additions</Text>
+                <Text style={styles.title} >Categories</Text>
+                <Text style={styles.link}>See all </Text>
 
             </View>
 
-            <FlatList data={payload.data}
-                renderItem={({ item }) => <ItemCard info={item} />}
-                keyExtractor={(item) => item.id}
-                horizontal
 
-            />
         </View>);
 }
 
@@ -59,12 +55,10 @@ const styles = StyleSheet.create({
 
 
     titleContainer: {
-        width: '100%',
+        width: '90%',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'flex-end',
-        marginTop: 20,
+        justifyContent: 'space-between',
     },
 
     title: {
@@ -79,6 +73,7 @@ const styles = StyleSheet.create({
         fontWeight: '400',
         lineHeight: 16,
     },
+
 
 
 });
