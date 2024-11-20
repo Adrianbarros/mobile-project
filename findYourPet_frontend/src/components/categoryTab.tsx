@@ -1,9 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function categoryTab() {
+interface Props {
+    name: string;
+    link: string;
+}
+function categoryTab(data: Props) {
     return (
-        <div>categoryTab</div>
+        <div>{data.name}</div>
     )
 }
 
