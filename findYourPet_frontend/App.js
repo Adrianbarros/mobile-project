@@ -1,12 +1,12 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { HomeStack } from './src/navigation/homeStack';
-import NavegationBar from './src/components/navegationBar';
+import { CategoriesStack } from './src/navigation/categoriesStack';
 
 export default function App() {
   return (
     <NavigationContainer  >
       <HomeStack />
-      <NavegationBar />
+      <CategoriesStack />
     </NavigationContainer>
 
   );
