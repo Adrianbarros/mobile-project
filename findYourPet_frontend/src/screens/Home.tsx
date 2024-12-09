@@ -11,11 +11,13 @@ const Home = () => {
             id: '1',
             name: 'munchkin',
             type: 'big boy',
+            picture: '../assets/munchkn.png',
             liked: false
         }, {
             id: '2',
             name: 'munchkin',
             type: 'big boy',
+            picture: '../assets/munchkn.png',
             liked: false
         },]
 

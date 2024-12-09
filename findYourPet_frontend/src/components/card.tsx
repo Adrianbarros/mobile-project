@@ -14,7 +14,7 @@ export const ItemCard = (info: any) => {
                 </View>
                 <Image
                     style={styles.image}
-                    source={require('../assets/munchkn.png')}
+                    source={require(info.info.picture)}
                 />
             </View>
             <View style={styles.nameBox}>
